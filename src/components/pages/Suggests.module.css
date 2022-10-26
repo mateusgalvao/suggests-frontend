@@ -1,0 +1,89 @@
+
+.conteiner{
+    display: flex;
+    background-color: #f7f7f7;
+    width: 100%;
+    height: 100%;
+    color: rgb(38, 37, 39);
+    align-items: center;
+    border-radius: 5px;
+    text-align: center;
+    top: 124px;  
+    z-index: 0.9;  
+    padding: 3%;
+    margin: 0 auto 2px  0;
+}
+
+.tituDesc{
+    height: 100%;
+    width: 55%;
+    min-width: 55%;
+    max-width: 60%;
+    display: block;
+    margin-left: 5%;
+}
+
+.titulo{
+    font-weight: bold;
+    width: 55%;
+    font-size: 17px;
+}
+
+.description{
+    text-align:justify;
+    width: 95%;
+    height: 50%;
+    font-size: 15px;
+    word-wrap: break-word
+}
+
+
+.divBtn{
+    width: 8%;
+    border-radius: 8px;
+    margin-left: 2%;
+    background-color: #16479d;
+    color: #fff;
+    border: none;
+    min-width: 7%;
+    min-height: 2.5rem;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.divBtn:hover{
+    transition: .6s;
+    width: 10%;
+    min-height: 3rem;
+
+}
+
+.divBtnEs{
+    border-radius: 8px;
+    background-color: #16479d;
+    color: #fff;
+    border: none;
+    min-width: 5%;
+    min-height: 2.5rem;
+    width: 30%;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-right: 15%;
+}
+.divBtnEs:hover{
+    min-height: 3rem;
+    transition: .3s;
+
+}
+
+.divRigth{
+    width: 30%;
+    height: 50px;   
+    margin-right: 15px; 
+}
+
+.divBtn span{
+  margin-right: 10px;
+}
