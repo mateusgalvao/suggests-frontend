@@ -1,12 +1,13 @@
 .navbar {
-  width: 95%;
+  min-width: 97%;
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   background-color: #f7f7f7;
   color: #16479d;
   position: fixed;
   z-index: 8;
-  padding: 3%;
+  padding: 40px;
   margin: 0 auto 0 -3%;
 }
 
