@@ -54,26 +54,30 @@
 
 .divBtn:hover{
     transition: .6s;
-    width: 10%;
     min-height: 3rem;
 
 }
+
+.date{
+    width: 150px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
 
 .divBtnEs{
-    border-radius: 8px;
+    align-items: center;
     background-color: #16479d;
-    color: #fff;
-    border: none;
-    min-width: 5%;
-    min-height: 2.5rem;
-    width: 30%;
-    cursor: pointer;
-    font-size: 1.1em;
-    font-weight: bold;
-    margin-right: 15%;
+      color: #fff;
+      cursor: pointer;
+      width: 3%;
+      height: 35px;
+      border-radius: 30px;
+      font-size: 30px;
+      display: flex;
 }
 .divBtnEs:hover{
-    min-height: 3rem;
+    min-height: 2.3rem;
     transition: .3s;
 
 }

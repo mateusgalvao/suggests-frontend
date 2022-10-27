@@ -77,16 +77,11 @@ function Suggests() {
                     <div className={styles.description}>{s.description}</div>
                   </div>
                   <div className={styles.date}>Data: {formatDate(s.date)}</div>
-                    <div className={styles.divRigth}>
-                      <button className={styles.divBtnEs}>
+                    
                       <Link className={styles.divBtnEs} to={`/OnlySuggest/${s._id}`}>
                       <FaArrowAltCircleRight></FaArrowAltCircleRight>
                       </Link>
-                      </button> 
-                      <button className={styles.divBtnEs}>
-                        <FaEnvelope></FaEnvelope>
-                      </button> 
-                  </div>
+                     
             </div> ))}
         {suggests.length === 0 && (<p>Não há no momento!</p>)}
       </div>
