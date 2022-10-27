@@ -22,11 +22,13 @@ function Navbar() {
           <li>
               <Link to="/AddSuggests">Adicionar</Link>
           </li>
-          <li>
-          <Link onClick={logout}>Sair</Link>
-          </li>
+          
           <li>
           <Link to="/suggests"> Sugestoes</Link>
+          </li>
+
+          <li>
+          <Link onClick={logout}>Sair</Link>
           </li>
           </>):( 
           <>
