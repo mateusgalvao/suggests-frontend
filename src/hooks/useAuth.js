@@ -27,7 +27,8 @@ export default function useAuth(){
         let msgText = 'Cadastro realizado com sucesso!'
         let msgType = 'sucess'
         try {
-            const data = await api.post('/users/register', user).then((response)=>{
+            const data = await api.post('/users/register', user)
+            .then((response)=>{
                 return response.data
             })
         await authUser(data)
@@ -41,17 +42,15 @@ export default function useAuth(){
     async function login(user){
         let msgText = "login realizado com sucesso"
         let msgType = "success"
-        
         try {
             const data = await api.post('/users/login', user)
             .then((response) => {
                 return response.data
             })
             await authUser(data)
-
         } catch (error) {
-            let msgText = error.response.data.message
-            let msgType = "error"            
+            msgText = error.response.data.message
+            msgType = "error"            
         }
         setMessage(msgText, msgType)
 
