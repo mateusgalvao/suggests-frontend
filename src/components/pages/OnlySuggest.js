@@ -96,7 +96,7 @@ function OnlySuggest() {
                 {suggest.comments ? (<p>
                     <FaRegComments></FaRegComments>{suggest.comments.length} comentários</p> ) : 
                     <span>0 voto</span>}
-                  <p><FaCalendarDay className={styles.date}></FaCalendarDay>{suggest.date}</p>
+                  <p><FaCalendarDay className={styles.date}></FaCalendarDay>{new Date(suggest.date ).toLocaleDateString()}</p>
                   {suggest.likes ? (<p>
                     <FaRegThumbsUp className={styles.azul}></FaRegThumbsUp>{suggest.likes.length} voto(s)</p> ) : 
                     <span>0 voto</span>}

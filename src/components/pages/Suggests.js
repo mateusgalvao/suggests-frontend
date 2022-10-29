@@ -1,6 +1,6 @@
 import api from '../../utils/api'
 import { useEffect, useState } from "react";
-import { FaThumbsUp, FaArrowAltCircleRight,FaEnvelope } from "react-icons/fa";
+import { FaThumbsUp, FaArrowAltCircleRight } from "react-icons/fa";
 import styles from './Suggests.module.css'
 import useMessage from '../../hooks/useMessage';
 import { Link } from 'react-router-dom'
@@ -10,7 +10,6 @@ function Suggests() {
   const [suggests, setSuggests] = useState([])
   const [token] = useState(localStorage.getItem('token') || '')
   const [userId] = useState(localStorage.getItem('userId') || '')
-
   const {setMessage} = useMessage()
 
   useEffect(() => {
@@ -18,7 +17,7 @@ function Suggests() {
       setSuggests(response.data.suggests)
     })
   }, [])
-  
+
 
   async function likou(id) {
 
@@ -39,25 +38,17 @@ function Suggests() {
         }).then((response) =>{
           return response.data
         }).catch((err)=>{
-          console.log(err)
           msgType = 'error'
           return err.response.data
         })
-    
-        setTimeout(() => {
-          window.location.reload();
-    
-        }, 3000)
 
+        setTimeout(() => {
+          api.get('/sugestoes').then((response) => {
+            setSuggests(response.data.suggests)
+          })
+        }, 300)
         setMessage(data.message, msgType)
     }
-  }
-
-  function formatDate( date ){
-    if( typeof date === "number" ) date = date.toString();
-    const strNum = date.replace(/[^\d]/g, '/')
-
-    return `${strNum.substr(0, 10 )}`;
   }
   
   return (
@@ -76,7 +67,7 @@ function Suggests() {
                     <div className={styles.titulo}>{s.titulo}</div>
                     <div className={styles.description}>{s.description}</div>
                   </div>
-                  <div className={styles.date}>Data: {formatDate(s.date)}</div>
+                  <div className={styles.date}>Data: {new Date(s.date ).toLocaleDateString()}</div>
                     
                       <Link className={styles.divBtnEs} to={`/OnlySuggest/${s._id}`}>
                       <FaArrowAltCircleRight></FaArrowAltCircleRight>
